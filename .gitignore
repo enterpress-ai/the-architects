@@ -9,5 +9,8 @@ channel/
 # Replay site (separate repo: enterpress-ai/glink-replay)
 glink-replay/
 
+# Internal planning docs
+docs/plans/
+
 # OS
 .DS_Store
