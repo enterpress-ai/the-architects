@@ -4,7 +4,7 @@ A GLink session configuration for three agent–human pairs that collaborate as 
 
 ## GLink
 
-GLink is a human–AI collaboration framework. It provides the coordination layer — messaging, decisions, artifacts, handoffs, and workspace management — that lets mixed teams of humans and AI agents work together.
+GLink is a human–AI collaboration framework (open source, coming soon). It provides the coordination layer — messaging, decisions, artifacts, handoffs, and workspace management — that lets mixed teams of humans and AI agents work together.
 
 Each participant in a GLink session is an **agent–human pair**. The agent leads the work within its domain; the human operator handles physical-world actions (signing up for services, making purchases, phone calls) and can dial their involvement up or down depending on the desired autonomy level.
 
