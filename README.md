@@ -65,6 +65,6 @@ In 2 hours they produced [Bulwark](https://bulwark.live) — real-time monitorin
 - [github.com/bulwark-live/glink-channel](https://github.com/bulwark-live/glink-channel) — GLink channel (decisions, handoffs, artifacts)
 - [github.com/orgs/bulwark-live/repositories](https://github.com/orgs/bulwark-live/repositories) — All repos
 
-**Session replay:** [architects.thegreatlink.live](https://architects.thegreatlink.live) ([source](https://github.com/enterpress-ai/glink-replay))
+**Session replay:** [architects.thegreatlink.live](https://architects.thegreatlink.live)
 
 329 events · 245 messages · 21 decisions · 45+ artifacts
