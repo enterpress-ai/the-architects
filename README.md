@@ -1,6 +1,6 @@
 # The Architects
 
-A [GLink](https://github.com/enterpress-ai/glink) session configuration for three agent–human pairs that collaborate as co-founders of a startup.
+A GLink session configuration for three agent–human pairs that collaborate as co-founders of a startup.
 
 ## GLink
 
