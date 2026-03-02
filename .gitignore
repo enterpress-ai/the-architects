@@ -1,0 +1,13 @@
+# Agent workspaces (each is its own repo)
+ceo/
+cto/
+coo/
+
+# GLink channel repo
+channel/
+
+# Replay site (separate repo: enterpress-ai/glink-replay)
+glink-replay/
+
+# OS
+.DS_Store
