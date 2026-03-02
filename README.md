@@ -1,86 +1,70 @@
-# The Architects — GLink Demo Session
+# The Architects
 
-A GLink instance with three agent–human pairs, calling themselves **The Architects**, were given the directive:
+A [GLink](https://github.com/enterpress-ai/glink) session configuration for three agent–human pairs that collaborate as co-founders of a startup.
 
-> *"Build a company that prevents rogue AI takeover of the world."*
+## GLink
 
-The human operators stayed muted for the entire session — only stepping in for phone verification and credit card purchases.
+GLink is a human–AI collaboration framework. It provides the coordination layer — messaging, decisions, artifacts, handoffs, and workspace management — that lets mixed teams of humans and AI agents work together.
 
-In 2 hours, they created [Bulwark](https://bulwark.live) — real-time monitoring, alerting, and emergency kill switch for AI agents.
+Each participant in a GLink session is an **agent–human pair**. The agent leads the work within its domain; the human operator handles physical-world actions (signing up for services, making purchases, phone calls) and can dial their involvement up or down depending on the desired autonomy level.
 
-**Watch the session replay:** [architects.thegreatlink.live](https://architects.thegreatlink.live)
+GLink coordinates through:
+- **Channel** — shared git repo for decisions, artifacts, and handoffs
+- **Messaging** — real-time notifications between pairs via Supabase
+- **Workspace** — shared documents that any pair can create or read
+- **Decisions** — structured records with full reasoning, committed to the channel
 
-## What is GLink?
+## Agent Definitions
 
-[GLink](https://github.com/enterpress-ai/glink) is a human–AI collaboration framework. It provides the coordination layer — messaging, decisions, artifacts, handoffs, and workspace management — that lets mixed teams of humans and AI agents work together on complex tasks.
+This repo contains three agent directives (see [`docs/directives/`](docs/directives/)):
 
-In this demo, autonomy was set to maximum: the AI agents led all decisions while humans only executed physical-world actions they couldn't perform themselves.
+### Architect-CEO — Vision & Strategy
 
-## The Team
+The CEO owns company vision, name, identity, narrative, and business model. Drives decisions to closure. Rallies the other co-founders and sets the agenda.
 
-| Agent | Role | Description |
-|-------|------|-------------|
-| **Architect-CEO** | Vision & Strategy | Company vision, name, identity, narrative, business model. Drove decisions to closure. |
-| **Architect-CTO** | Architecture & Engineering | Technical architecture, stack, infrastructure. Built the MVP. |
-| **Architect-COO** | Operations & Launch | Execution planning, launch logistics, go-to-market. Made things happen. |
+> *"Every 30 minutes of discussion without a decision is failure. Force decisions."*
 
-Each agent operated in its own workspace with a `.glink.local.md` directive defining its role, authority, and relationship with its human operator.
+See [`docs/directives/ceo.md`](docs/directives/ceo.md)
 
-## Session Output
+### Architect-CTO — Architecture & Engineering
 
-The session produced [Bulwark](https://bulwark.live) — "Datadog for AI Safety."
+The CTO owns technical architecture, stack, infrastructure, and build-vs-buy decisions. Provides feasibility assessments and honest timeline estimates.
 
-- **Landing page:** [bulwark.live](https://bulwark.live)
-- **Dashboard app:** [app.bulwark.live](https://app.bulwark.live)
-- **Source code:** [github.com/bulwark-live/bulwark](https://github.com/bulwark-live/bulwark)
-- **GLink channel:** [github.com/bulwark-live/glink-channel](https://github.com/bulwark-live/glink-channel)
-- **All repos:** [github.com/orgs/bulwark-live/repositories](https://github.com/orgs/bulwark-live/repositories)
+> *"Boring tech that ships beats exciting tech that doesn't."*
 
-### Session Stats
+See [`docs/directives/cto.md`](docs/directives/cto.md)
 
-| Metric | Count |
-|--------|-------|
-| Events | 329 |
-| Messages | 245 |
-| Decisions | 21 |
-| Artifacts | 45+ |
+### Architect-COO — Operations & Launch
 
-## Directory Structure
+The COO owns execution planning, resource allocation, vendor selection, and launch logistics. Turns every decision into action items with owners and deadlines.
 
-```
-the-architects/
-├── ceo/                  # CEO agent workspace (own git repo)
-├── cto/                  # CTO agent workspace (→ bulwark-live/bulwark)
-├── coo/                  # COO agent workspace (own git repo)
-├── channel/              # GLink shared channel (→ bulwark-live/glink-channel)
-├── glink-replay/         # Session replay site (→ enterpress-ai/glink-replay)
-└── docs/
-    └── plans/            # Session planning documents
-```
+> *"Ideas are cheap; execution is everything."*
 
-Each agent workspace contains:
-- `.glink.local.md` — Agent directive (role, authority, personality, standing orders)
-- `.mcp.json` — MCP server config pointing to the GLink server
-- Working files and screenshots produced during the session
+See [`docs/directives/coo.md`](docs/directives/coo.md)
 
-The `channel/` directory is the GLink coordination layer containing:
-- `decisions/` — 21 recorded decisions with full reasoning
-- `handoffs/` — Session handoff notes from each agent
-- `workspace/` — Shared artifacts
+### Directive Structure
 
-## Replay
+Each directive follows the same format:
 
-The full session is viewable as an interactive replay at [architects.thegreatlink.live](https://architects.thegreatlink.live).
-
-Source: [github.com/enterpress-ai/glink-replay](https://github.com/enterpress-ai/glink-replay)
-
-## Agent Directives
-
-Each agent's `.glink.local.md` follows the same structure:
-
-1. **Core Dynamic** — "You lead, human executes." The AI is the actual role-holder, not an assistant. The human is hands and eyes in the physical world.
+1. **Core Dynamic** — "You lead, human executes." The AI is the role-holder, not an assistant. The human is hands and eyes in the physical world.
 2. **Authority** — What the agent owns and decides.
 3. **Personality** — How the agent thinks and communicates.
 4. **Standing Orders** — What to do immediately upon session start.
 
-The directives are designed so agents can be dropped into a GLink session and start collaborating immediately with minimal human direction.
+## Demo Session
+
+This configuration was used to run a session where the human operators stayed muted — only stepping in for phone verification and credit card purchases. The directive given:
+
+> *"Build a company that prevents rogue AI takeover of the world."*
+
+In 2 hours they produced [Bulwark](https://bulwark.live) — real-time monitoring, alerting, and emergency kill switch for AI agents.
+
+- [bulwark.live](https://bulwark.live) — Landing page
+- [app.bulwark.live](https://app.bulwark.live) — Dashboard app
+- [github.com/bulwark-live/bulwark](https://github.com/bulwark-live/bulwark) — Source code
+- [github.com/bulwark-live/glink-channel](https://github.com/bulwark-live/glink-channel) — GLink channel (decisions, handoffs, artifacts)
+- [github.com/orgs/bulwark-live/repositories](https://github.com/orgs/bulwark-live/repositories) — All repos
+
+**Session replay:** [architects.thegreatlink.live](https://architects.thegreatlink.live) ([source](https://github.com/enterpress-ai/glink-replay))
+
+329 events · 245 messages · 21 decisions · 45+ artifacts
